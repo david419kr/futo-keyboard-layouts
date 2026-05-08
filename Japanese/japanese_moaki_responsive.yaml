@@ -56,7 +56,9 @@ rows:
         left: "せ"
         up: "そ"
       - type: base
-        spec: "ー"
+        spec: "ＡＢＣ|_"
+        code: -20
+        attributes: { style: Functional, labelFlags: {} }
     splittable: false
   - letters:
       - type: flick
@@ -95,23 +97,11 @@ rows:
         left: "へ"
         up: "ほ"
       - type: flick
-        primary:
-          type: base
-          spec: "、"
-          attributes: { width: Custom1 }
-        left: "（"
-        right: "）"
-        up: "？"
-        down: "！"
-      - type: flick
-        primary:
-          type: base
-          spec: "。"
-          attributes: { width: Custom1 }
-        left: "「"
-        right: "」"
-        up: "『"
-        down: "』"
+        primary: "ー"
+        left: "-"
+        right: "_"
+        up: "〜"
+        down: "~"
     splittable: false
   - letters:
       - type: flick
@@ -172,9 +162,58 @@ rows:
           type: base
           spec: "!icon/action_switch_language|!code/action_switch_language"
           attributes: { style: Functional, width: Custom1, labelFlags: {}, longPressEnabled: true }
+      - type: flick
+        primary:
+          type: base
+          spec: "、"
+          attributes: *halfFunctional
+        left: "「"
+        right: "」"
+        up: "『"
+        down: "』"
+        attributes: *halfFunctional
       - $space
+      - type: flick
+        primary:
+          type: base
+          spec: "。"
+          attributes: *halfFunctional
+        left: "（"
+        right: "）"
+        up: "？"
+        down: "！"
+        attributes: *halfFunctional
       - type: enter
         attributes:
           width: Custom2
     attributes: *globalAttrs
     splittable: false
+subKeyboards:
+  Alphabet1:
+    attributes:
+      width: Regular
+      showPopup: true
+      moreKeyMode: All
+      useKeySpecShortcut: true
+      style: Normal
+      shiftable: true
+      labelFlags:
+        autoXScale: true
+    rows:
+      - letters: q w e r t y u i o p
+      - letters: a s d f g h j k l
+      - letters: $shift z x c v b n m $delete
+      - bottom:
+          - type: base
+            spec: "あ|_"
+            code: -19
+            attributes: { width: FunctionalKey }
+          - type: base
+            spec: "!text/keylabel_to_symbol|!code/key_switch_alpha_symbol"
+            attributes: { width: Regular }
+          - ","
+          - $space
+          - "."
+          - "!icon/action_left|!code/action_left"
+          - "!icon/action_right|!code/action_right"
+          - $enter
