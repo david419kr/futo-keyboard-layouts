@@ -55,12 +55,8 @@ rows:
         down: "す"
         left: "せ"
         up: "そ"
-      - type: flick
-        primary: "、"
-        left: "（"
-        right: "）"
-        up: "？"
-        down: "！"
+      - type: base
+        spec: "ー"
     splittable: false
   - letters:
       - type: flick
@@ -99,7 +95,19 @@ rows:
         left: "へ"
         up: "ほ"
       - type: flick
-        primary: "。"
+        primary:
+          type: base
+          spec: "、"
+          attributes: { width: Custom1 }
+        left: "（"
+        right: "）"
+        up: "？"
+        down: "！"
+      - type: flick
+        primary:
+          type: base
+          spec: "。"
+          attributes: { width: Custom1 }
         left: "「"
         right: "」"
         up: "『"
@@ -149,9 +157,6 @@ rows:
       - type: base
         spec: "!?#|!code/key_switch_alpha_symbol"
         attributes: &halfFunctional { style: Functional, width: Custom1, labelFlags: {} }
-      - type: base
-        spec: "·"
-        attributes: { style: Functional, width: Custom1, labelFlags: {} }
       - type: case
         normal:
           type: flick
