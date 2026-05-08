@@ -1,0 +1,175 @@
+name: Japanese Moaki / QWERTY Auto
+description: Uses a Moaki-style Japanese flick layout on phones and Japanese QWERTY on tablets or unfolded foldables.
+languages: ja
+numberRowMode: UserConfigurable
+bottomRowHeightMode: Flexible
+imeHint: moaki
+overrideWidths:
+  Custom1: 0.08333333333
+  Custom2: 0.16666666667
+attributes: &globalAttrs
+  width: Grow
+  showPopup: false
+  moreKeyMode: OnlyExplicit
+  useKeySpecShortcut: false
+  style: Normal
+  shiftable: false
+  labelFlags:
+    alignLabelOffCenter: false
+    hasHintLabel: false
+rowHeightMode: FillHeight
+rows:
+  - letters:
+      - type: flick
+        primary: "ㅂ|っ"
+        right: "ば"
+        upRight: "び"
+        down: "ぶ"
+        left: "べ"
+        up: "ぼ"
+      - type: flick
+        primary: "ㅈ|っ"
+        right: "ざ"
+        upRight: "じ"
+        down: "ず"
+        left: "ぜ"
+        up: "ぞ"
+      - type: flick
+        primary: "ㄷ|っ"
+        right: "だ"
+        upRight: "ぢ"
+        down: "づ"
+        left: "で"
+        up: "ど"
+      - type: flick
+        primary: "ㄱ|っ"
+        right: "が"
+        upRight: "ぎ"
+        down: "ぐ"
+        left: "げ"
+        up: "ご"
+      - type: flick
+        primary: "ㅅ|っ"
+        right: "さ"
+        upRight: "し"
+        down: "す"
+        left: "せ"
+        up: "そ"
+      - type: flick
+        primary: "、"
+        left: "（"
+        right: "）"
+        up: "？"
+        down: "！"
+    splittable: false
+  - letters:
+      - type: flick
+        primary: "ㅁ|ん"
+        right: "ま"
+        upRight: "み"
+        down: "む"
+        left: "め"
+        up: "も"
+      - type: flick
+        primary: "ㄴ|ん"
+        right: "な"
+        upRight: "に"
+        down: "ぬ"
+        left: "ね"
+        up: "の"
+      - type: flick
+        primary: "ㅇ|ん"
+        right: "あ"
+        upRight: "い"
+        down: "う"
+        left: "え"
+        up: "お"
+      - type: flick
+        primary: "ㄹ|る"
+        right: "ら"
+        upRight: "り"
+        down: "る"
+        left: "れ"
+        up: "ろ"
+      - type: flick
+        primary: "ㅎ|っ"
+        right: "は"
+        upRight: "ひ"
+        down: "ふ"
+        left: "へ"
+        up: "ほ"
+      - type: flick
+        primary: "。"
+        left: "「"
+        right: "」"
+        up: "『"
+        down: "』"
+    splittable: false
+  - letters:
+      - type: flick
+        primary: "ㅋ|っ"
+        right: "か"
+        upRight: "き"
+        down: "く"
+        left: "け"
+        up: "こ"
+      - type: flick
+        primary: "ㅌ|っ"
+        right: "た"
+        upRight: "ち"
+        down: "つ"
+        left: "て"
+        up: "と"
+      - type: flick
+        primary: "ㅊ|っ"
+        right: "ちゃ"
+        upRight: "ち"
+        down: "ちゅ"
+        left: "ちぇ"
+        up: "ちょ"
+      - type: flick
+        primary: "ㅍ|っ"
+        right: "ぱ"
+        upRight: "ぴ"
+        down: "ぷ"
+        left: "ぺ"
+        up: "ぽ"
+      - type: flick
+        primary: "ｗ"
+        right: "わ"
+        upRight: "うぃ"
+        down: "ヴ"
+        left: "うぇ"
+        up: "を"
+      - type: base
+        spec: "!icon/delete_key|!code/key_delete"
+        attributes: &repeatable { style: Functional, labelFlags: {}, repeatableEnabled: true }
+    splittable: false
+  - bottom:
+      - type: base
+        spec: "!?#|!code/key_switch_alpha_symbol"
+        attributes: &halfFunctional { style: Functional, width: Custom1, labelFlags: {} }
+      - type: base
+        spec: "·"
+        attributes: { style: Functional, width: Custom1, labelFlags: {} }
+      - type: case
+        normal:
+          type: flick
+          primary:
+            type: base
+            spec: "!icon/japanese_key|*"
+            attributes: *halfFunctional
+          left: "◌゙|["
+          up: "あぁ|`"
+          right: "◌゚|]"
+          attributes: *halfFunctional
+        shifted:
+          type: base
+          spec: "!icon/action_switch_language|!code/action_switch_language"
+          attributes: { style: Functional, width: Custom1, labelFlags: {}, longPressEnabled: true }
+      - $space
+      - type: enter
+        attributes:
+          width: Custom2
+    attributes: *globalAttrs
+    splittable: false
