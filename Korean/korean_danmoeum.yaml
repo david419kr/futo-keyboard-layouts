@@ -12,7 +12,7 @@ rows:
     - {type: base, spec: "ㄷ", moreKeys: ["÷"]}
     - {type: base, spec: "ㄱ", moreKeys: ["="]}
     - {type: base, spec: "ㅅ", moreKeys: ["/"]}
-    - {type: base, spec: "ㅗ", moreKeys: ["-"]}
+    - {type: base, spec: "ㅗ", moreKeys: ["_"]}
     - {type: base, spec: "ㅐ", moreKeys: ["("]}
     - {type: base, spec: "ㅔ", moreKeys: [")"]}
 
