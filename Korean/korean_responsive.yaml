@@ -3,34 +3,35 @@ languages: ko
 description: Uses Danmoeum on phone-size screens and Dubeolsik on tablets or unfolded foldables.
 combiners:
   - KoreanCombineInitials
-attributes: {shiftable: false}
+attributes: {shiftable: false, moreKeyMode: OnlyExplicit}
 autoShift: false
 minimumFunctionalKeyWidth: 0.0
 rows:
   - letters:
-    - {type: case, normal: ["ㅂ", "ㅃ"], shiftedManually: ["ㅃ"]}
-    - {type: case, normal: ["ㅈ", "ㅉ"], shiftedManually: ["ㅉ"]}
-    - {type: case, normal: ["ㄷ", "ㄸ"], shiftedManually: ["ㄸ"]}
-    - {type: case, normal: ["ㄱ", "ㄲ"], shiftedManually: ["ㄲ"]}
-    - {type: case, normal: ["ㅅ", "ㅆ"], shiftedManually: ["ㅆ"]}
-    - {type: case, normal: ["ㅗ", "ㅛ"], shiftedManually: ["ㅛ"]}
-    - {type: case, normal: ["ㅐ", "ㅒ"], shiftedManually: ["ㅒ"]}
-    - {type: case, normal: ["ㅔ", "ㅖ"], shiftedManually: ["ㅖ"]}
+    - {type: base, spec: "ㅂ", moreKeys: ["+"]}
+    - {type: base, spec: "ㅈ", moreKeys: ["×"]}
+    - {type: base, spec: "ㄷ", moreKeys: ["÷"]}
+    - {type: base, spec: "ㄱ", moreKeys: ["="]}
+    - {type: base, spec: "ㅅ", moreKeys: ["/"]}
+    - {type: base, spec: "ㅗ", moreKeys: ["-"]}
+    - {type: base, spec: "ㅐ", moreKeys: ["("]}
+    - {type: base, spec: "ㅔ", moreKeys: [")"]}
 
   - letters:
-    - [ㅁ, 1]
-    - ㄴ
-    - ㅇ
-    - ㄹ
-    - ㅎ
-    - {type: case, normal: ["ㅓ", "ㅕ"], shiftedManually: ["ㅕ"]}
-    - {type: case, normal: ["ㅏ", "ㅑ"], shiftedManually: ["ㅑ"]}
-    - [ㅣ, 0]
+    - {type: base, spec: "ㅁ", moreKeys: ["!"]}
+    - {type: base, spec: "ㄴ", moreKeys: ["@"]}
+    - {type: base, spec: "ㅇ", moreKeys: ["#"]}
+    - {type: base, spec: "ㄹ", moreKeys: ["%"]}
+    - {type: base, spec: "ㅎ", moreKeys: ["^"]}
+    - {type: base, spec: "ㅓ", moreKeys: ["&"]}
+    - {type: base, spec: "ㅏ", moreKeys: ["*"]}
+    - {type: base, spec: "ㅣ", moreKeys: ["-"]}
 
   - letters:
-    - ㅋ
-    - ㅌ
-    - ㅊ
-    - ㅍ
-    - {type: case, normal: ["ㅜ", "ㅠ"], shiftedManually: ["ㅠ"]}
-    - ㅡ
+    - {type: base, spec: "ㅋ", moreKeys: ["'"]}
+    - {type: base, spec: "ㅌ", moreKeys: ['"']}
+    - {type: base, spec: "ㅊ", moreKeys: [":"]}
+    - {type: base, spec: "ㅍ", moreKeys: [";"]}
+    - {type: base, spec: "ㅜ", moreKeys: [","]}
+    - {type: base, spec: "ㅡ", moreKeys: ["?"]}
+    - $delete
