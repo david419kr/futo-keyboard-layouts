@@ -423,6 +423,7 @@ One of `numbers`, `letters` or `bottom` must be defined.
 *   **Behavior**:
     *   If defined, will be treated as a number row by default.
     *   Number rows are given grow keys, no background, and smaller height by default.
+    *   10-key number rows are splittable by default.
 
 #### `letters`
 
@@ -470,7 +471,7 @@ The default bottom row is the following:
 *   **Description**: Whether this row is splittable.
 *   **Type**: `Boolean`
 *   **Optional**: Yes
-*   **Default Value**: `true` if defined as a letters row, `false` otherwise
+*   **Default Value**: `true` if defined as a letters row or as a 10-key number row, `false` otherwise
 *   **Behavior**:
     *   If true, allows the row to be split when the user prefers a split layout (e.g. landscape)
 
@@ -945,7 +946,8 @@ The `KeyWidth` enum represents various width tokens for keys in a keyboard layou
 #### `Grow`
 *   **Description**: Grow width, used for keys that take up remaining space divided evenly among all grow keys in the row.
 *   **Behavior**:
-    *   Currently not supported in splittable rows.
+    *   Supported for standard 10-key number rows in split layout.
+    *   Avoid using it in custom splittable rows unless the layout engine path is known to handle the row shape.
     *   Can complicate width calculation for functional keys and others.
     *   Mainly used for spacebar.
 
