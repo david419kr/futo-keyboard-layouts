@@ -1,21 +1,24 @@
 name: Japanese QWERTY
 languages: ja
 imeHint: qwerty
+overrideWidths:
+  Custom1: 0.04
 rows:
-  - letters: q w e r t y u i o p
-  - letters: a s d f g h j k l -
-  - letters: $symbols z x c v b n m $delete
+  - letters: Q|q W|w E|e R|r T|t Y|y U|u I|i O|o P|p
+  - letters: A|a S|s D|d F|f G|g H|h J|j K|k L|l
+  - letters: ー Z|z X|x C|c V|v B|b N|n M|m $delete
   - bottom:
       - type: base
-        spec: "ABC|_"
+        spec: "!?#|!code/key_switch_alpha_symbol"
+        attributes: &halfFunctional { style: Functional, width: Custom1, labelFlags: {} }
+      - type: base
+        spec: "A|_"
         code: -20
-        attributes: {width: FunctionalKey}
+        attributes: *halfFunctional
       - "、|,"
       - $action
       - $space
       - "。|."
-      - "!icon/action_left|!code/action_left"
-      - "!icon/action_right|!code/action_right"
       - $enter
 subKeyboards:
   # ABC
@@ -35,6 +38,4 @@ subKeyboards:
           - ","
           - $space
           - "."
-          - "!icon/action_left|!code/action_left"
-          - "!icon/action_right|!code/action_right"
           - $enter
