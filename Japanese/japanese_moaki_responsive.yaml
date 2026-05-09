@@ -176,8 +176,8 @@ rows:
           attributes: *halfFunctional
         left: "「"
         right: "」"
-        up: "『"
-        down: "』"
+        up: "・"
+        down: "…"
         attributes: *halfFunctional
       - $space
       - type: flick
