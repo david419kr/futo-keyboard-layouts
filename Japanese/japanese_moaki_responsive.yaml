@@ -55,10 +55,12 @@ rows:
         down: "す"
         left: "せ"
         up: "そ"
-      - type: base
-        spec: "ＡＢＣ|_"
-        code: -20
-        attributes: { style: Functional, labelFlags: {} }
+      - type: flick
+        primary: "ー"
+        left: "-"
+        right: "_"
+        up: "〜"
+        down: "~"
     splittable: false
   - letters:
       - type: flick
@@ -97,11 +99,12 @@ rows:
         left: "へ"
         up: "ほ"
       - type: flick
-        primary: "ー"
-        left: "-"
-        right: "_"
-        up: "〜"
-        down: "~"
+        primary: "f|っ"
+        right: "ふぁ"
+        upRight: "ふぃ"
+        down: "ふ"
+        left: "ふぇ"
+        up: "ふぉ"
     splittable: false
   - letters:
       - type: flick
@@ -133,10 +136,10 @@ rows:
         left: "ぺ"
         up: "ぽ"
       - type: flick
-        primary: "ｗ"
+        primary: "w|ｗ"
         right: "わ"
         upRight: "うぃ"
-        down: "ヴ"
+        down: "う"
         left: "うぇ"
         up: "を"
       - type: base
@@ -147,6 +150,10 @@ rows:
       - type: base
         spec: "!?#|!code/key_switch_alpha_symbol"
         attributes: &halfFunctional { style: Functional, width: Custom1, labelFlags: {} }
+      - type: base
+        spec: "A|_"
+        code: -20
+        attributes: *halfFunctional
       - type: case
         normal:
           type: flick
