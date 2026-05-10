@@ -855,6 +855,7 @@ languages:
     - nordic
   ja:
     - flick
+    - japanese_flick_responsive
     - japanese_moaki_responsive
     - japanese_qwerty
     - flick_latin
